@@ -52,6 +52,7 @@ function Login() {
         className="absolute left-4 top-4 cursor-pointer object-contain md:left-10 md:top-6"
         width={200}
           height={200}
+          
         alt=""
       />
 
