@@ -16,7 +16,7 @@ import {
     user: User | null
     signUp: (email: string, password: string) => Promise<void>
     signIn: (email: string, password: string) => Promise<void>
-    logout: () => Promise<void>
+    // logout: () => Promise<void>
     error: string | null
     loading: boolean
   }
@@ -25,7 +25,7 @@ import {
     user: null,
     signUp: async () => {},
     signIn: async () => {},
-    logout: async () => {},
+    // logout: async () => {},
     error: null,
     loading: false,
   })
@@ -88,19 +88,19 @@ import {
         .finally(() => setLoading(false))
     }
   
-    const logout = async () => {
-      setLoading(true)
+    // const logout = async () => {
+    //   setLoading(true)
   
-      signOut(auth)
-        .then(() => {
-          setUser(null)
-        })
-        .catch((error) => alert(error.message))
-        .finally(() => setLoading(false))
-    }
+    //   signOut(auth)
+    //     .then(() => {
+    //       setUser(null)
+    //     })
+    //     .catch((error) => alert(error.message))
+    //     .finally(() => setLoading(false))
+    // }
   
     const memoedValue = useMemo(
-      () => ({ user, signUp, signIn, error, loading, logout }),
+      () => ({ user, signUp, signIn, error, loading }),
       [user, loading, error]
     )
   console.log('memoedValue', memoedValue)

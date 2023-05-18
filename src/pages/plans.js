@@ -19,7 +19,7 @@ import Script from 'next/script'
 // }P
 
 function Plans() {
-  const { logout,  } = useAuth()
+  // const { logout,  } = useAuth()
   const [selectedPlan, setSelectedPlan] = useState("0");
 
 //   const [selectedPlan, setSelectedPlan] = useState<Product | null>(products[2])
@@ -95,12 +95,12 @@ function Plans() {
             className="cursor-pointer object-contain"
           />
         </Link>
-        <button
+        {/* <button
           className="text-lg font-medium hover:underline hover:text-orange-600"
           onClick={logout}
         >
           Logout
-        </button>
+        </button> */}
       </header>
 
       <main className="mt-10 mx-auto max-w-5xl px-5 pt-28 pb-12 transition-all md:px-10">
